@@ -34,7 +34,7 @@ class HellarConfig():
         creds = {key: value for (key, value) in match}
 
         # standard Hellar defaults...
-        default_port = 9989 if (network == 'mainnet') else 9988
+        default_port = 7778 if (network == 'mainnet') else 7788
 
         # use default port for network if not specified in hellar.conf
         if not ('port' in creds):
