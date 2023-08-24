@@ -16,12 +16,12 @@ def test_hellard():
     config_text = HellarConfig.slurp_config_file(config.hellar_conf)
     network = 'mainnet'
     is_testnet = False
-    genesis_hash = u'00000b6d8eb923c6b3738a509231bfc2a8943a53316d46943284ef75ba358bec'
+    genesis_hash = u'00000fa67255a934520d6ff572828aa339af437d78ce6e6e6f4b2bd9ad30a0b9'
     for line in config_text.split("\n"):
         if line.startswith('testnet=1'):
             network = 'testnet'
             is_testnet = True
-            genesis_hash = u'00000c859a7aa5538110a356bd4803ff55e3f85302e754e3c7994c62feb3060f'
+            genesis_hash = u'00000b40bd778a9d4c0d35b674f7d09fec42e6c38bd3695e73a72b16519fcfe7'
 
     creds = HellarConfig.get_rpc_creds(config_text, network)
     hellard = HellarDaemon(**creds)
@@ -29,7 +29,7 @@ def test_hellard():
 
     assert hasattr(hellard, 'rpc_connection')
 
-    # Hellar testnet block 0 hash == 00000c859a7aa5538110a356bd4803ff55e3f85302e754e3c7994c62feb3060f
+    # Hellar testnet block 0 hash == 00000b40bd778a9d4c0d35b674f7d09fec42e6c38bd3695e73a72b16519fcfe7
     # test commands without arguments
     info = hellard.rpc_command('getinfo')
     info_keys = [

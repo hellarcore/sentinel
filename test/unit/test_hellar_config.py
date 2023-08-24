@@ -14,7 +14,7 @@ def hellar_conf(**kwargs):
     defaults = {
         'rpcuser': 'hellarrpc',
         'rpcpassword': 'EwJeV3fZTyTVozdECF627BkBMnNDwQaVLakG3A4wXYyk',
-        'rpcport': 19988,
+        'rpcport': 27788,
     }
 
     # merge kwargs into defaults
@@ -41,16 +41,16 @@ def test_get_rpc_creds():
         assert key in creds
     assert creds.get('user') == 'hellarrpc'
     assert creds.get('password') == 'EwJeV3fZTyTVozdECF627BkBMnNDwQaVLakG3A4wXYyk'
-    assert creds.get('port') == 19988
+    assert creds.get('port') == 27788
 
-    hellar_config = hellar_conf(rpcpassword='s00pers33kr1t', rpcport=9988)
+    hellar_config = hellar_conf(rpcpassword='s00pers33kr1t', rpcport=7788)
     creds = HellarConfig.get_rpc_creds(hellar_config, 'testnet')
 
     for key in ('user', 'password', 'port'):
         assert key in creds
     assert creds.get('user') == 'hellarrpc'
     assert creds.get('password') == 's00pers33kr1t'
-    assert creds.get('port') == 9988
+    assert creds.get('port') == 7788
 
     no_port_specified = re.sub('\nrpcport=.*?\n', '\n', hellar_conf(), re.M)
     creds = HellarConfig.get_rpc_creds(no_port_specified, 'testnet')
@@ -59,7 +59,7 @@ def test_get_rpc_creds():
         assert key in creds
     assert creds.get('user') == 'hellarrpc'
     assert creds.get('password') == 'EwJeV3fZTyTVozdECF627BkBMnNDwQaVLakG3A4wXYyk'
-    assert creds.get('port') == 19982
+    assert creds.get('port') == 27782
 
 
 # ensure hellar network (mainnet, testnet) matches that specified in config
