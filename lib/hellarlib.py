@@ -204,7 +204,7 @@ def SHIM_serialise_for_hellard(sentinel_hex):
 
 
 # shims 'til we can fix the hellard side
-def SHIM_deserialise_from_hellarnd(hellard_hex):
+def SHIM_deserialise_from_hellard(hellard_hex):
     from models import HELLARD_GOVOBJ_TYPES
 
     # unpack

@@ -12,7 +12,7 @@ from peewee import PeeweeException  # , OperationalError, IntegrityError
 from hellard import HellarDaemon
 import hellarlib
 from decimal import Decimal
-hellarnd = HellarDaemon.from_hellar_conf(config.hellar_conf)
+hellard = HellarDaemon.from_hellar_conf(config.hellar_conf)
 import misc
 # ==============================================================================
 # do stuff here

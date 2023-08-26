@@ -161,7 +161,7 @@ def main():
     options = process_args()
 
     # check hellard connectivity
-    if not is_hellard_port_open(hellarnd):
+    if not is_hellard_port_open(hellard):
         print("Cannot connect to hellard. Please ensure hellard is running and the JSONRPC port is open to Sentinel.")
         return
 
