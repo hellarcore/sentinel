@@ -11,27 +11,27 @@ Alternatively to the guide on the Hellar website, you can also follow the simple
 
 ```./hellar-cli stop ``` // Adjust according to your root Hellar Core directory path
 
-cd .hellar
+```cd .hellar```
 
 # delete all files excluding "hellar.conf" and "wallet.dat"
 
-cd ..
+```cd ..```
 
-./hellard --daemon --reindex
+```./hellard --daemon --reindex```
 
 Installation
 -----------------------------------------------------
 1. Install Prerequisites
 # Make sure Python version 2.7.x or above is installed:
 
-python --version
+```python --version```
 # Update system packages and ensure virtualenv is installed:
 
-$ sudo apt-get update
-$ sudo apt-get -y install python-virtualenv
+```sudo apt-get update```
+```sudo apt-get -y install python-virtualenv```
 # Make sure the local Hellar Core daemon running is at least version 1.0.2
 
-$ ./hellar-cli getinfo | grep version
+```./hellar-cli getinfo | grep version```
 
 ------------------------------------------------------
 2. Install Sentinel
