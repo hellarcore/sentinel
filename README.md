@@ -27,17 +27,20 @@ Make sure Python version 2.7.x or above is installed:
 ```python --version```
 
 Update system packages and ensure virtualenv is installed:
+
 ```sudo apt-get update```
 
 ```sudo apt-get -y install python-virtualenv```
 
 Make sure the local Hellar Core daemon running is at least version 1.0.2
+
 ```./hellar-cli getinfo | grep version```
 
 <h3 align="center">------------------------------------------------------</h3>
 <h3 align="center">2. Install Sentinels</h3>
 
 Clone the Sentinel repo and install Python dependencies.
+
 ```git clone https://github.com/hellarpay/sentinel/sentinel.git && cd sentinel```
 
 ```virtualenv ./venv```
@@ -48,6 +51,7 @@ Clone the Sentinel repo and install Python dependencies.
 <h3 align="center">3. Configure & Test Your Configuration</h3>
 
 Open sentinel.conf - Run the following command in linux:
+
 ```nano sentinel.conf```
 
 Uncomment the #hellar_conf line, at the top of the file, then adjust the path to your Masternode’s hellar.conf. Save the file then close it.
@@ -55,14 +59,16 @@ Uncomment the #hellar_conf line, at the top of the file, then adjust the path to
 //hellar_conf=/path/to/hellar.conf
 
 Now run:
+
 ```venv/bin/python bin/sentinel.py```
 You should see: “hellard not synced with network! Awaiting full sync before running Sentinel.” This is exactly what we want to see at this stage.
 
 If the wallet has been resynched alreaedy, you will see no output which is what you want to see and it means you can skip the next sync step.
 
 <h3 align="center">------------------------------------------------------</h3>
-4. Check That Your Hellarpay Wallet is Synced
-# Go back into your root Hellar directory, then check the status of your sync:
+<h3 align="center">4. Check That Your Hellarpay Wallet is Synced</h3>
+
+Go back into your root Hellar directory, then check the status of your sync:
 
 ```cd ..```
 
