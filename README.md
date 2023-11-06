@@ -1,4 +1,5 @@
 Hellar Core Sentinel
+
 Sentinel is an all-powerful toolset for Hellarpay.
 
 Sentinel is an autonomous agent for persisting, processing and automating Hellar Core V1.0.0 governance objects and tasks, and for expanded functions in upcoming releases.
@@ -30,15 +31,16 @@ $ sudo apt-get -y install python-virtualenv
 Make sure the local Hellar Core daemon running is at least version 1.0.0 (1000000)
 
 $ ./hellar-cli getinfo | grep version
+
 2. Install Sentinel
 Clone the Sentinel repo and install Python dependencies.
 
 $ git clone https://github.com/hellarpay/sentinel/sentinel.git && cd sentinel
 $ virtualenv ./venv
 $ ./venv/bin/pip install -r requirements.txt
+
 3. Configure & Test Your Configuration
 Open sentinel.conf - Run the following command in linux:
-
 $ nano sentinel.conf
 Uncomment the #hellar_conf line, at the top of the file, then adjust the path to your Masternode’s hellar.conf. Save the file then close it.
 
@@ -79,6 +81,7 @@ Go back to your local wallet, open the debug console, and run these commands to 
 
 walletpassphrase <YOURPASSPHRASE> 120 (only if you have a wallet password)
 masternode start-alias <LABEL>
+
 6. Test Your Sentinel
 You’re needed back in Sentinel directory:
 
