@@ -20,52 +20,53 @@ delete all files excluding "hellar.conf" and "wallet.dat"
 ```./hellard --daemon --reindex```
 
 <h3 align="center">Installation</h3>
------------------------------------------------------
+
 <h3 align="center">1. Install Prerequisites</h3>
 Make sure Python version 2.7.x or above is installed:
 
 ```python --version```
-# Update system packages and ensure virtualenv is installed:
+Update system packages and ensure virtualenv is installed:
 
 ```sudo apt-get update```
 ```sudo apt-get -y install python-virtualenv```
-# Make sure the local Hellar Core daemon running is at least version 1.0.2
+Make sure the local Hellar Core daemon running is at least version 1.0.2
 
 ```./hellar-cli getinfo | grep version```
 
-------------------------------------------------------
-2. Install Sentinel
-# Clone the Sentinel repo and install Python dependencies.
+<h3 align="center">------------------------------------------------------</h3>
+<h3 align="center">2. Install Sentinels</h3>
 
-$ git clone https://github.com/hellarpay/sentinel/sentinel.git && cd sentinel
-$ virtualenv ./venv
-$ ./venv/bin/pip install -r requirements.txt
+Clone the Sentinel repo and install Python dependencies.
+
+```git clone https://github.com/hellarpay/sentinel/sentinel.git && cd sentinel```
+```virtualenv ./venv```
+```./venv/bin/pip install -r requirements.txt```
 
 ------------------------------------------------------
 3. Configure & Test Your Configuration
-# Open sentinel.conf - Run the following command in linux:
-$ nano sentinel.conf
-# Uncomment the #hellar_conf line, at the top of the file, then adjust the path to your Masternode’s hellar.conf. Save the file then close it.
+Open sentinel.conf - Run the following command in linux:
+```nano sentinel.conf```
+Uncomment the #hellar_conf line, at the top of the file, then adjust the path to your Masternode’s hellar.conf. Save the file then close it.
 
 hellar_conf=/path/to/hellar.conf
 
-# Now run:
-$ venv/bin/python bin/sentinel.py
-# You should see: “hellard not synced with network! Awaiting full sync before running Sentinel.” This is exactly what we want to see at this stage.
+Now run:
+```venv/bin/python bin/sentinel.py```
+You should see: “hellard not synced with network! Awaiting full sync before running Sentinel.” This is exactly what we want to see at this stage.
 
-# If the wallet has been resynched alreaedy, you will see no output which is what you want to see and it means you can skip the next sync step.
+If the wallet has been resynched alreaedy, you will see no output which is what you want to see and it means you can skip the next sync step.
 
 ------------------------------------------------------
 4. Check That Your Hellarpay Wallet is Synced
 # Go back into your root Hellar directory, then check the status of your sync:
 
-cd ..
-./hellar-cli mnsync status
-# This is what you’re waiting to see:
+```cd ..```
+```./hellar-cli mnsync status```
+This is what you’re waiting to see:
 
 AssetId 999, all trues, one false, and a FINISHED. Keep issuing ./hellar-cli mnsync status until it looks like this:
 
-{
+```{
 "AssetID": 999,
 "AssetName": "MASTERNODE_SYNC_FINISHED",
 "AssetStartTime": 1555922063,
@@ -75,13 +76,13 @@ AssetId 999, all trues, one false, and a FINISHED. Keep issuing ./hellar-cli mns
 "IsWinnersListSynced": true,
 "IsSynced": true,
 "IsFailed": false
-}
+}```
 
-# At this point, your remote masternode is synchronized and chatting with the network but is not accepted as a masternode because it hasn’t been introduced to the network by your collateral.
+At this point, your remote masternode is synchronized and chatting with the network but is not accepted as a masternode because it hasn’t been introduced to the network by your collateral.
 
 ------------------------------------------------------
 5. Start Your Masternode
-# Go back to your local wallet, open the debug console, and run these commands to start your masternode (LABEL is the name you used for your MN in the masternode.conf):
+Go back to your local wallet, open the debug console, and run these commands to start your masternode (LABEL is the name you used for your MN in the masternode.conf):
 
 walletpassphrase <YOURPASSPHRASE> 120 (only if you have a wallet password)
 masternode start-alias <LABEL>
@@ -90,20 +91,20 @@ masternode start-alias <LABEL>
 6. Test Your Sentinel
 # You’re needed back in Sentinel directory:
 
-cd sentinel
+```cd sentinel```
 
-#Run:
-venv/bin/python bin/sentinel.py
+Run:
+```venv/bin/python bin/sentinel.py```
 # It should return no output if everything is working correctly. This is how you know it’s working, and your masternode and sentinel setup is properly configured.
 
 ------------------------------------------------------
 7. Create Your Sentinel Crontab Entry
 # Run:
 
-crontab -e
+```crontab -e```
 #Add the following line below to the end of the file:
 
-* * * * * cd /USERNAME/sentinel && ./venv/bin/python bin/sentinel.py 2>&1 >> sentinel-cron.log
+```* * * * * cd /USERNAME/sentinel && ./venv/bin/python bin/sentinel.py 2>&1 >> sentinel-cron.log```
 # Make sure you:
 
 # Change USERNAME to your username (VPS is /root/sentinel).
@@ -114,15 +115,15 @@ crontab -e
 8. All Done On Sentinel. Finally Check Your Masternode
 # Go back into your Hellar Core root directory:
 
-cd ..
+```cd ..```
 # Run:
 
-./hellar-cli masternode debug
+```./hellar-cli masternode debug```
 # You should see the message “Masternode successfully started.”. If you have followed all the steps outlined in the guide accurately and achieved this result - this is it, you've made it. Congratulations!
 
 ------------------------------------------------------
 Troubleshooting
 # To view debug output, set the SENTINEL_DEBUG environment variable to anything non-zero, then run the script manually:
 
-$ SENTINEL_DEBUG=1 ./venv/bin/python bin/sentinel.py
+```SENTINEL_DEBUG=1 ./venv/bin/python bin/sentinel.py```
 
