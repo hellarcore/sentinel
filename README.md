@@ -138,7 +138,7 @@ Add the following line below to the end of the file:
 
 Make sure you:
 
-# Change USERNAME to your username (VPS is /root/sentinel).
+Change USERNAME to your username (VPS is /root/sentinel).
 Hit enter to create another line at the end after this line, or the file will not work.
 Save and exit.
 
