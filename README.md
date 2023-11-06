@@ -27,10 +27,12 @@ Make sure Python version 2.7.x or above is installed:
 ```python --version```
 
 Update system packages and ensure virtualenv is installed:
+
 ```sudo apt-get update```
 ```sudo apt-get -y install python-virtualenv```
 
 Make sure the local Hellar Core daemon running is at least version 1.0.2
+
 ```./hellar-cli getinfo | grep version```
 
 <h3 align="center">------------------------------------------------------</h3>
