@@ -56,7 +56,7 @@ Open sentinel.conf - Run the following command in linux:
 
 <details>
 
-<summary>Uncomment the ```hellar_conf``` line, at the top of the file, then adjust the path to your Masternode’s hellar.conf. Save the file then close it.</summary>
+<summary>Uncomment the # hellar_conf  line, at the top of the file, then adjust the path to your Masternode’s hellar.conf. Save the file then close it.</summary>
 
 ```ruby
    hellar_conf=/path/to/hellar.conf
@@ -68,6 +68,7 @@ Open sentinel.conf - Run the following command in linux:
 Now run:
 
 ```venv/bin/python bin/sentinel.py```
+
 You should see: “hellard not synced with network! Awaiting full sync before running Sentinel.” This is exactly what we want to see at this stage.
 
 If the wallet has been resynched alreaedy, you will see no output which is what you want to see and it means you can skip the next sync step.
@@ -80,6 +81,7 @@ Go back into your root Hellar directory, then check the status of your sync:
 ```cd ..```
 
 ```./hellar-cli mnsync status```
+
 This is what you’re waiting to see:
 
 AssetId 999, all trues, one false, and a FINISHED. Keep issuing ./hellar-cli mnsync status until it looks like this:
