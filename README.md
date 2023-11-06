@@ -2,12 +2,12 @@
 <h3 align="center">Sentinel is an all-powerful toolset for Hellarpay</h3>
 
 
-Sentinel is an autonomous agent for persisting, processing and automating Hellar Core v.1.0.2 governance objects and tasks, and for expanded functions in upcoming releases.
-Sentinel is implemented as a Python application that binds to a local version 1.0.2 hellard instance on each Hellar Core V1.0.0 Masternode.
+  Sentinel is an autonomous agent for persisting, processing and automating Hellar Core v.1.0.2 governance objects and tasks, and for expanded functions in upcoming releases.
+  Sentinel is implemented as a Python application that binds to a local version 1.0.2 hellard instance on each Hellar Core V1.0.0 Masternode.
 
-This guide covers installing Sentinel onto an existing 1.0.2 Masternode in Ubuntu 18.04.
+  This guide covers installing Sentinel onto an existing 1.0.2 Masternode in Ubuntu 18.04.
 
-Alternatively to the guide on the Hellar website, you can also follow the simple step-by-step guide below. Before you proceed it is advisable to restart your masternode with -reindex to make sure you start off the steps fresh and fully synced - it will save you time later on in the guide as well.
+  Alternatively to the guide on the Hellar website, you can also follow the simple step-by-step guide below. Before you proceed it is advisable to restart your masternode with -reindex to make sure you start off the steps fresh and fully synced - it will save you time later on in the guide as well.
 
 ./hellar-cli stop // Adjust according to your root Hellar Core directory path
 
