@@ -1,6 +1,6 @@
-Hellar Core Sentinel
+# Hellar Core Sentinel
 
-# Sentinel is an all-powerful toolset for Hellarpay.
+Sentinel is an all-powerful toolset for Hellarpay.
 
 # Sentinel is an autonomous agent for persisting, processing and automating Hellar Core V.1.0.2 governance objects and tasks, and for expanded functions in upcoming releases.
 
