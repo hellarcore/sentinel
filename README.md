@@ -28,7 +28,8 @@ Make sure Python version 2.7.x or above is installed:
 
 Update system packages and ensure virtualenv is installed:
 
-```sudo apt-get update```;
+```sudo apt-get update```
+
 ```sudo apt-get -y install python-virtualenv```
 
 Make sure the local Hellar Core daemon running is at least version 1.0.2
@@ -41,16 +42,19 @@ Make sure the local Hellar Core daemon running is at least version 1.0.2
 Clone the Sentinel repo and install Python dependencies.
 
 ```git clone https://github.com/hellarpay/sentinel/sentinel.git && cd sentinel```
+
 ```virtualenv ./venv```
+
 ```./venv/bin/pip install -r requirements.txt```
 
 <h3 align="center">------------------------------------------------------</h3>
-3. Configure & Test Your Configuration
+<h3 align="center">3. Configure & Test Your Configuration</h3>
+
 Open sentinel.conf - Run the following command in linux:
 ```nano sentinel.conf```
 Uncomment the #hellar_conf line, at the top of the file, then adjust the path to your Masternode’s hellar.conf. Save the file then close it.
 
-hellar_conf=/path/to/hellar.conf
+//hellar_conf=/path/to/hellar.conf
 
 Now run:
 ```venv/bin/python bin/sentinel.py```
