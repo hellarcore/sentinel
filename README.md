@@ -13,7 +13,7 @@ Alternatively to the guide on the Hellar website, you can also follow the simple
 
 ```cd .hellar```
 
-# delete all files excluding "hellar.conf" and "wallet.dat"
+delete all files excluding "hellar.conf" and "wallet.dat"
 
 ```cd ..```
 
@@ -21,8 +21,8 @@ Alternatively to the guide on the Hellar website, you can also follow the simple
 
 Installation
 -----------------------------------------------------
-1. Install Prerequisites
-# Make sure Python version 2.7.x or above is installed:
+<h3 align="center">1. Install Prerequisites</h3>
+Make sure Python version 2.7.x or above is installed:
 
 ```python --version```
 # Update system packages and ensure virtualenv is installed:
