@@ -11,11 +11,13 @@ Alternatively to the guide on the Hellar website, you can also follow the simple
 
 ```./hellar-cli stop ``` // Adjust according to your root Hellar Core directory path
 
+
 ```cd .hellar```
 
 delete all files excluding "hellar.conf" and "wallet.dat"
 
 ```cd ..```
+
 
 ```./hellard --daemon --reindex```
 
