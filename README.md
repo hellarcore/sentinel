@@ -54,16 +54,9 @@ Open sentinel.conf - Run the following command in linux:
 
 ```nano sentinel.conf```
 
-Uncomment the #hellar_conf line, at the top of the file, then adjust the path to your Masternode’s hellar.conf. Save the file then close it.
 <details>
 
-<summary>Uncomment the #hellar_conf line, at the top of the file, then adjust the path to your Masternode’s hellar.conf. Save the file then close it.</summary>
-
-### You can add a header
-
-You can add text within a collapsed section. 
-
-You can add an image or a code block, too.
+<summary>Uncomment the ```hellar_conf``` line, at the top of the file, then adjust the path to your Masternode’s hellar.conf. Save the file then close it.</summary>
 
 ```ruby
    hellar_conf=/path/to/hellar.conf
