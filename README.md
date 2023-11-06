@@ -21,6 +21,7 @@ delete all files excluding "hellar.conf" and "wallet.dat"
 
 <h1 align="center">Installation</a> 
 
+
 <h3 align="center">1. Install Prerequisites</h3>
 Make sure Python version 2.7.x or above is installed:
 
@@ -37,6 +38,7 @@ Make sure the local Hellar Core daemon running is at least version 1.0.2
 ```./hellar-cli getinfo | grep version```
 
 
+
 <h3 align="center">2. Install Sentinels</h3>
 
 Clone the Sentinel repo and install Python dependencies.
@@ -46,6 +48,7 @@ Clone the Sentinel repo and install Python dependencies.
 ```virtualenv ./venv```
 
 ```./venv/bin/pip install -r requirements.txt```
+
 
 
 <h3 align="center">3. Configure & Test Your Configuration</h3>
@@ -74,6 +77,7 @@ You should see: “hellard not synced with network! Awaiting full sync before ru
 If the wallet has been resynched alreaedy, you will see no output which is what you want to see and it means you can skip the next sync step.
 
 
+
 <h3 align="center">4. Check That Your Hellarpay Wallet is Synced</h3>
 
 Go back into your root Hellar directory, then check the status of your sync:
@@ -85,7 +89,7 @@ Go back into your root Hellar directory, then check the status of your sync:
 This is what you’re waiting to see:
 
 AssetId 999, all trues, one false, and a FINISHED. Keep issuing ./hellar-cli mnsync status until it looks like this:
-```
+
 {
 "AssetID": 999,
 "AssetName": "MASTERNODE_SYNC_FINISHED",
@@ -97,9 +101,9 @@ AssetId 999, all trues, one false, and a FINISHED. Keep issuing ./hellar-cli mns
 "IsSynced": true,
 "IsFailed": false
 }
-```
 
 At this point, your remote masternode is synchronized and chatting with the network but is not accepted as a masternode because it hasn’t been introduced to the network by your collateral.
+
 
 
 <h3 align="center">5. Start Your Masternode</h3>
@@ -107,6 +111,7 @@ Go back to your local wallet, open the debug console, and run these commands to 
 
 walletpassphrase <YOURPASSPHRASE> 120 (only if you have a wallet password)
 masternode start-alias <LABEL>
+
 
 
 <h3 align="center">6. Test Your Sentinel</h3>
@@ -119,6 +124,7 @@ Run:
 ```venv/bin/python bin/sentinel.py```
 
 It should return no output if everything is working correctly. This is how you know it’s working, and your masternode and sentinel setup is properly configured.
+
 
 
 <h3 align="center">7. Create Your Sentinel Crontab Entry</h3>
@@ -137,6 +143,7 @@ Hit enter to create another line at the end after this line, or the file will no
 Save and exit.
 
 
+
 <h3 align="center">8. All Done On Sentinel. Finally Check Your Masternode</h3>
 
 Go back into your Hellar Core root directory:
@@ -148,6 +155,7 @@ Run:
 ```./hellar-cli masternode debug```
 
 You should see the message “Masternode successfully started.”. If you have followed all the steps outlined in the guide accurately and achieved this result - this is it, you've made it. Congratulations!
+
 
 
 <h3 align="center">Troubleshooting</h3>
