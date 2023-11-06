@@ -51,7 +51,9 @@ Clone the Sentinel repo and install Python dependencies.
 <h3 align="center">3. Configure & Test Your Configuration</h3>
 
 Open sentinel.conf - Run the following command in linux:
+
 ```nano sentinel.conf```
+
 Uncomment the #hellar_conf line, at the top of the file, then adjust the path to your Masternode’s hellar.conf. Save the file then close it.
 
 //hellar_conf=/path/to/hellar.conf
