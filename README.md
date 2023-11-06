@@ -9,7 +9,7 @@ Sentinel is implemented as a Python application that binds to a local version 1.
 
 Alternatively to the guide on the Hellar website, you can also follow the simple step-by-step guide below. Before you proceed it is advisable to restart your masternode with -reindex to make sure you start off the steps fresh and fully synced - it will save you time later on in the guide as well.
 
-./hellar-cli stop // Adjust according to your root Hellar Core directory path
+'''./hellar-cli stop ''' // Adjust according to your root Hellar Core directory path
 
 cd .hellar
 
