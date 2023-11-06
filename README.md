@@ -1,4 +1,4 @@
-<h1 align="center">Hellar Core<a href="https://github.com/hellarcore/sentinel" target="_blank">Sentinel</a> 
+<h1 align="center">Hellar Core<a href="https://github.com/hellarcore/sentinel" target="_blank"> Sentinel</a> 
 <h3 align="center">Sentinel is an all-powerful toolset for Hellarpay</h3>
 
 
