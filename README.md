@@ -115,7 +115,9 @@ You’re needed back in Sentinel directory:
 ```cd sentinel```
 
 Run:
+
 ```venv/bin/python bin/sentinel.py```
+
 It should return no output if everything is working correctly. This is how you know it’s working, and your masternode and sentinel setup is properly configured.
 
 
@@ -123,9 +125,11 @@ It should return no output if everything is working correctly. This is how you k
 Run:
 
 ```crontab -e```
+
 Add the following line below to the end of the file:
 
 ```* * * * * cd /USERNAME/sentinel && ./venv/bin/python bin/sentinel.py 2>&1 >> sentinel-cron.log```
+
 Make sure you:
 
 # Change USERNAME to your username (VPS is /root/sentinel).
@@ -140,7 +144,9 @@ Go back into your Hellar Core root directory:
 ```cd ..```
 
 Run:
+
 ```./hellar-cli masternode debug```
+
 You should see the message “Masternode successfully started.”. If you have followed all the steps outlined in the guide accurately and achieved this result - this is it, you've made it. Congratulations!
 
 
