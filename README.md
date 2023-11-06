@@ -19,7 +19,7 @@ delete all files excluding "hellar.conf" and "wallet.dat"
 
 ```./hellard --daemon --reindex```
 
-Installation
+<h3 align="center">Installation</h3>
 -----------------------------------------------------
 <h3 align="center">1. Install Prerequisites</h3>
 Make sure Python version 2.7.x or above is installed:
