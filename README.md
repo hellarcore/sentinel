@@ -1,6 +1,6 @@
-# Hellar Core Sentinel
+<h1 align="center">Hellar Core<a href="https://github.com/hellarcore/sentinel" target="_blank">Sentinel</a> 
+<h3 align="center">Sentinel is an all-powerful toolset for Hellarpay</h3>
 
-Sentinel is an all-powerful toolset for Hellarpay.
 
 Sentinel is an autonomous agent for persisting, processing and automating Hellar Core V.1.0.2 governance objects and tasks, and for expanded functions in upcoming releases.
 Sentinel is implemented as a Python application that binds to a local version 1.0.2 hellard instance on each Hellar Core V1.0.0 Masternode.
